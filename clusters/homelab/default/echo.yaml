@@ -42,7 +42,8 @@ spec:
   rules:
     - http:
         paths:
-          - path: /echo
+          - host: echo.com
+            path: /
             pathType: Prefix
             backend:
               service:

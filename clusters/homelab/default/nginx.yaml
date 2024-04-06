@@ -49,7 +49,8 @@ spec:
   rules:
     - http:
         paths:
-          - path: /nginx
+          - host: nginx.com
+            path: /
             pathType: Prefix
             backend:
               service:
