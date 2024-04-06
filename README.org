@@ -1,0 +1,3 @@
+#+title:Homelab
+
+My Homelab setup running as a [[https://k3s.io/][K3S]] cluster.
