@@ -17,9 +17,15 @@ spec:
         - name: echo-app
           image: hashicorp/http-echo
           args:
-            - "-text=Eu amo minha linda esposa"
+            - "-text=$(TEXT)"
           ports:
             - containerPort: 5678
+          env:
+            - name: TEXT
+              valueFrom:
+                secretKeyRef:
+                  name: test-secret
+                  key: sealed-value
 ---
 apiVersion: v1
 kind: Service
