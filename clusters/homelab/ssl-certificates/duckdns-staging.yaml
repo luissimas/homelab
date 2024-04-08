@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: duckdns-wildcard-cert-totorinho.duckdns.org-staging
+  namespace: ssl-certificates
+spec:
+  secretName: duckdns-wildcard-cert-totorinho.duckdns.org-staging
+  issuerRef:
+    name: webhook-duckdns-cert-manager-webhook-duckdns-staging
+    kind: ClusterIssuer
+  dnsNames:
+    - "totorinho.duckdns.org"
+    - "*.totorinho.duckdns.org"
