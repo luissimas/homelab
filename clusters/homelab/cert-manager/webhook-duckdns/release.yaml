@@ -6,7 +6,7 @@ metadata:
 spec:
   chart:
     spec:
-      chart: cert-manager-webhook-duckdns
+      chart: ./charts/cert-manager-webhook-duckdns
       sourceRef:
         kind: GitRepository
         name: cert-manager-webhook-duckdns
