@@ -11,6 +11,7 @@ My Homelab setup running as a [[https://k3s.io/][K3S]] cluster.
 * TODO
 - [X] GitOps setup with Flux
 - [X] Secrets management
+- [ ] Manifests validation in CI
 - [ ] Ensure bootstrap order is correct
 - [ ] SSL certificates
 - [ ] Storage
