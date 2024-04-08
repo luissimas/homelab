@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: webhook-duckdns-helm-chart-value-overrides
+  namespace: cert-manager
+data:
+  values.yaml: |-
+    groupName: totorinho.duckdns.org
+
+    certManager:
+      namespace: cert-manager
+      serviceAccountName: cert-manager-service-account
+
+    secret:
+      existingSecret: true
+      existingSecretName: duckdns-token-secret
+
+    clusterIssuer:
+      email: luissimas@protonmail.com
+      staging:
+        create: true
+      production:
+        create: true

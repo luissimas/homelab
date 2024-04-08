@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: webhook-duckdns
+  namespace: cert-manager
+spec:
+  interval: 5m0s
+  url: https://github.com/joshuakraitberg/cert-manager-webhook-duckdns
+  ref:
+    branch: master
