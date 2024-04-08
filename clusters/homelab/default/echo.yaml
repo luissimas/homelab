@@ -46,7 +46,7 @@ metadata:
   namespace: default
 spec:
   rules:
-    - host: echo.com
+    - host: echo.duckdns.org
       http:
         paths:
           - path: /
