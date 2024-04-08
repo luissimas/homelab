@@ -9,7 +9,7 @@ spec:
       chart: cert-manager-webhook-duckdns
       sourceRef:
         kind: GitRepository
-        name: webhook-duckdns
+        name: cert-manager-webhook-duckdns
       version: 1.4.x
   interval: 5m0s
   releaseName: webhook-duckdns
