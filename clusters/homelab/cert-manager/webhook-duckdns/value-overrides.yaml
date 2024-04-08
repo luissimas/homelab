@@ -9,7 +9,7 @@ data:
 
     certManager:
       namespace: cert-manager
-      serviceAccountName: cert-manager-service-account
+      serviceAccountName: cert-manager
 
     secret:
       existingSecret: true

@@ -16,4 +16,4 @@ data:
         - "9.9.9.9"
     serviceAccount:
       create: true
-      name: "cert-manager-service-account"
+      name: "cert-manager"
