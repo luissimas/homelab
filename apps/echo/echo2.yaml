@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: echo2-app
-  namespace: default
+  namespace: echo
 spec:
   selector:
     matchLabels:
