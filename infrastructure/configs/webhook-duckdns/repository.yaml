@@ -4,7 +4,7 @@ metadata:
   name: cert-manager-webhook-duckdns
   namespace: cert-manager
 spec:
-  interval: 5m0s
+  interval: 1h0m0s
   url: https://github.com/joshuakraitberg/cert-manager-webhook-duckdns
   ref:
     branch: master

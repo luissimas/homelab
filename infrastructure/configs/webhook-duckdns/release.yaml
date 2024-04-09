@@ -11,7 +11,7 @@ spec:
         kind: GitRepository
         name: cert-manager-webhook-duckdns
       version: 1.4.x
-  interval: 5m0s
+  interval: 1h0m0s
   releaseName: webhook-duckdns
   targetNamespace: cert-manager
   valuesFrom:
