@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: test-local-path-pvc
-  namespace: default
+  namespace: echo
 spec:
   accessModes:
     - ReadWriteOnce
