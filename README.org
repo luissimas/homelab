@@ -12,8 +12,9 @@ My Homelab setup running as a [[https://k3s.io/][K3S]] cluster.
 - [X] GitOps setup with Flux
 - [X] Secrets management
 - [X] Manifests validation in CI
-- [ ] Ensure bootstrap order is correct
+- [X] Ensure bootstrap order is correct
+- [X] SSL certificates
 - [ ] Flux UI
-- [ ] SSL certificates
+- [ ] Traefik ingress
 - [ ] Storage
 - [ ] Monitoring stack
