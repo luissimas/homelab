@@ -38,7 +38,6 @@ jobs:
           kubectl -n cert-manager wait helmrelease/cert-manager --for=condition=ready --timeout=5m
           kubectl -n sealed-secrets wait helmrelease/sealed-secrets --for=condition=ready --timeout=5m
           kubectl -n flux-system wait helmrelease/weave-dashboard --for=condition=ready --timeout=5m
-          kubectl -n cert-manager wait helmrelease/webhook-duckdns --for=condition=ready --timeout=5m
           kubectl -n reflector wait helmrelease/reflector --for=condition=ready --timeout=5m
       - name: Debug failure
         if: failure()
