@@ -14,7 +14,7 @@ My Homelab setup running as a [[https://k3s.io/][K3S]] cluster.
 - [X] Manifests validation in CI
 - [X] Ensure bootstrap order is correct
 - [X] SSL certificates
-- [ ] Flux UI
+- [X] Flux UI
 - [ ] Traefik ingress
 - [ ] Storage
 - [ ] Monitoring stack
