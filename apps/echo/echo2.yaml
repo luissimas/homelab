@@ -40,7 +40,7 @@ metadata:
   namespace: default
 spec:
   rules:
-    - host: echo2.com
+    - host: echo2.totorinho.duckdns.org
       http:
         paths:
           - path: /

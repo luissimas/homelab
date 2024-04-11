@@ -46,7 +46,7 @@ metadata:
   namespace: echo
 spec:
   rules:
-    - host: echo.duckdns.org
+    - host: echo.totorinho.duckdns.org
       http:
         paths:
           - path: /
