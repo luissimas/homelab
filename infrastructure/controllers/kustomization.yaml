@@ -5,3 +5,4 @@ resources:
   - sealed-secrets
   - weave-dashboard
   - reflector
+  - traefik

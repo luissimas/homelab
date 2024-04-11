@@ -3,6 +3,15 @@
 with pkgs;
 
 mkShell {
-  buildInputs =
-    [ yq-go kustomize kubeconform kubectl kubeseal fluxcd weave-gitops ];
+  buildInputs = [
+    yq-go
+    kustomize
+    kubeconform
+    kubectl
+    kubeseal
+    fluxcd
+    weave-gitops
+    apacheHttpd
+    openssl
+  ];
 }
