@@ -12,6 +12,7 @@ spec:
         name: traefik
       version: 27.x
   interval: 1h0m0s
+  timeout: 5m
   releaseName: traefik
   targetNamespace: traefik
   valuesFrom:
