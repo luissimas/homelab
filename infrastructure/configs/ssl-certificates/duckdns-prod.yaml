@@ -6,7 +6,7 @@ metadata:
 spec:
   secretName: duckdns-wildcard-cert-totorinho.duckdns.org
   issuerRef:
-    name: webhook-duckdns-cert-manager-webhook-duckdns
+    name: webhook-duckdns-cert-manager-webhook-duckdns-production
     kind: ClusterIssuer
   dnsNames:
     - "totorinho.duckdns.org"
