@@ -45,6 +45,10 @@ metadata:
   name: echo-ingress
   namespace: echo
 spec:
+  tls:
+    - hosts:
+        - echo.totorinho.duckdns.org
+      secretName: duckdns-wildcard-cert-totorinho.duckdns.org
   rules:
     - host: echo.totorinho.duckdns.org
       http:
