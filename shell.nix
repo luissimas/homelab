@@ -13,5 +13,6 @@ mkShell {
     weave-gitops
     apacheHttpd
     openssl
+    k9s
   ];
 }
