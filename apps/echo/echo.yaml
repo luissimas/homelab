@@ -48,7 +48,7 @@ spec:
   tls:
     - hosts:
         - echo.totorinho.duckdns.org
-      secretName: duckdns-wildcard-cert-totorinho.duckdns.org
+      secretName: duckdns-wildcard-cert-totorinho.duckdns.org-staging
   rules:
     - host: echo.totorinho.duckdns.org
       http:
