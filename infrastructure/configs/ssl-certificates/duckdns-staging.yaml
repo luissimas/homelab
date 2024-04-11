@@ -11,3 +11,6 @@ spec:
   dnsNames:
     - "totorinho.duckdns.org"
     - "*.totorinho.duckdns.org"
+  secretTemplate:
+    annotations:
+      reflector.v1.k8s.emberstack.com/reflection-allowed: "true"
