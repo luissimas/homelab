@@ -15,6 +15,7 @@ My Homelab setup running as a [[https://k3s.io/][K3S]] cluster.
 - [X] Ensure bootstrap order is correct
 - [X] SSL certificates
 - [X] Flux UI
-- [ ] Traefik ingress
+- [X] Secrets replication for certificates
+- [X] SSL certificate prod
 - [ ] Storage
 - [ ] Monitoring stack
