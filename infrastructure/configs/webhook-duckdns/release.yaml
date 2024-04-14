@@ -14,7 +14,17 @@ spec:
   interval: 1h0m0s
   releaseName: webhook-duckdns
   targetNamespace: cert-manager
-  valuesFrom:
-    - kind: ConfigMap
-      name: webhook-duckdns-helm-chart-value-overrides
-      valuesKey: values.yaml
+  values:
+    groupName: totorinho.duckdns.org
+    certManager:
+      namespace: cert-manager
+      serviceAccountName: cert-manager
+    secret:
+      existingSecret: true
+      existingSecretName: duckdns-token-secret
+    clusterIssuer:
+      email: luissimas@protonmail.com
+      staging:
+        create: true
+      production:
+        create: true
