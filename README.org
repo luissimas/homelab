@@ -36,5 +36,6 @@ Apps are the user-facing services provided by the cluster.
 - [X] Flux UI
 - [X] Secrets replication for certificates
 - [X] SSL certificate prod
-- [ ] Monitoring stack
-- [ ] Storage
+- [X] Monitoring stack
+- [X] Structure the repository
+- [ ] Figure out how to do storage
