@@ -24,7 +24,10 @@ spec:
       enabled: true
       ingressClassName: traefik
       hosts:
-        - weave.totorinho.duckdns.org
+        - host: weave.totorinho.duckdns.org
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
       tls:
         - secretName: duckdns-wildcard-cert-totorinho.duckdns.org
           hosts:
