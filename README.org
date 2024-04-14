@@ -17,5 +17,5 @@ My Homelab setup running as a [[https://k3s.io/][K3S]] cluster.
 - [X] Flux UI
 - [X] Secrets replication for certificates
 - [X] SSL certificate prod
-- [ ] Storage
 - [ ] Monitoring stack
+- [ ] Storage
