@@ -20,3 +20,14 @@ spec:
       create: true
       passwordHash: $2a$10$JA02v0.HgwaJHwvimZii7OJ2rdBRTmeaMOtZ7Mq7TsOXoLY.JST9S
       username: admin
+    ingress:
+      enabled: true
+      ingressClassName: traefik
+      hosts:
+        - weave.totorinho.duckdns.org
+      tls:
+        - secretName: duckdns-wildcard-cert-totorinho.duckdns.org
+          hosts:
+            - weave.totorinho.duckdns.org
+    metrics:
+      enabled: true

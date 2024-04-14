@@ -8,6 +8,25 @@ My Homelab setup running as a [[https://k3s.io/][K3S]] cluster.
 - SSL certificates for all services
 - Monitoring stack with Prometheus and Grafana
 
+* Repository structure
+The repository structure follows the Flux recommendations, but I've also added an extra layer to provide a better separation of concerns. The idea is to have the following dependency graph
+
+#+begin_example
+              ┌───►Apps
+              │
+              │
+Infrastructure│
+              │
+              │
+              └───►Core Services
+#+end_example
+
+Infrastructure contains controllers and its configurations that do not expose any external services. They provide the fundamental resources to other services such as SSL certificates, secrets management, storage and so on.
+
+Core services are composed of the administrative services exposed from the cluster. This includes any administrative dashboards and monitoring stacks.
+
+Apps are the user-facing services provided by the cluster.
+
 * TODO
 - [X] GitOps setup with Flux
 - [X] Secrets management
@@ -17,5 +36,5 @@ My Homelab setup running as a [[https://k3s.io/][K3S]] cluster.
 - [X] Flux UI
 - [X] Secrets replication for certificates
 - [X] SSL certificate prod
-- [ ] Storage
 - [ ] Monitoring stack
+- [ ] Storage
