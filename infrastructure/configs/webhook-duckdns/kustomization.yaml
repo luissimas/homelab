@@ -4,4 +4,3 @@ resources:
   - release.yaml
   - repository.yaml
   - token-secret-sealed.yaml
-  - value-overrides.yaml
