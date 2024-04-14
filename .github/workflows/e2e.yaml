@@ -37,18 +37,15 @@ jobs:
         run: |
           kubectl -n cert-manager wait helmrelease/cert-manager --for=condition=ready --timeout=5m
           kubectl -n sealed-secrets wait helmrelease/sealed-secrets --for=condition=ready --timeout=5m
-          kubectl -n flux-system wait helmrelease/weave-dashboard --for=condition=ready --timeout=5m
           kubectl -n reflector wait helmrelease/reflector --for=condition=ready --timeout=5m
+          kubectl -n flux-system wait helmrelease/weave-dashboard --for=condition=ready --timeout=5m
           kubectl -n monitoring wait helmrelease/kube-prometheus-stack --for=condition=ready --timeout=5m
       - name: Debug failure
         if: failure()
         run: |
-          echo -e "\nLOGS:\n"
           kubectl -n flux-system get all
           kubectl -n flux-system logs deploy/source-controller
           kubectl -n flux-system logs deploy/kustomize-controller
           kubectl -n flux-system logs deploy/helm-controller
-          echo -e "\nRESOURCES:\n"
           flux get all --all-namespaces
-          echo -e "\nEVENTS:\n"
           kubectl get events
