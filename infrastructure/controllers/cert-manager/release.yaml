@@ -7,10 +7,10 @@ spec:
   chart:
     spec:
       chart: cert-manager
+      version: v1.14.x
       sourceRef:
         kind: HelmRepository
         name: jetstack
-      version: v1.14.x
   interval: 1h0m0s
   releaseName: cert-manager
   targetNamespace: cert-manager

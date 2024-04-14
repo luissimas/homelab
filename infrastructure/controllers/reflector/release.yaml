@@ -7,10 +7,10 @@ spec:
   chart:
     spec:
       chart: reflector
+      version: 7.1.x
       sourceRef:
         kind: HelmRepository
         name: reflector
-      version: 7.1.x
   interval: 1h0m0s
   releaseName: reflector-controller
   targetNamespace: reflector
