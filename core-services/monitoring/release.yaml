@@ -27,3 +27,6 @@ spec:
           - secretName: duckdns-wildcard-cert-totorinho.duckdns.org
             hosts:
               - grafana.totorinho.duckdns.org
+      env:
+        - GF_INSTALL_PLUGINS=grafana-strava-datasource
+        - GF_FEATURE_TOGGLES_ENABLE=externalServiceAccounts
