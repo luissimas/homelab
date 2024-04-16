@@ -33,6 +33,6 @@ spec:
           accessModes:
             - ReadWriteOnce
           size: 10Gi
-      env:
-        - GF_INSTALL_PLUGINS=grafana-strava-datasource
-        - GF_FEATURE_TOGGLES_ENABLE=externalServiceAccounts
+        env:
+          - GF_INSTALL_PLUGINS=grafana-strava-datasource
+          - GF_FEATURE_TOGGLES_ENABLE=externalServiceAccounts
