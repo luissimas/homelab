@@ -38,4 +38,8 @@ Apps are the user-facing services provided by the cluster.
 - [X] SSL certificate prod
 - [X] Monitoring stack
 - [X] Structure the repository
+- [ ] Persist Prometheus data
+- [ ] Strava dashboards in Grafana
+- [ ] Provision Grafana dashboards and datasources
 - [ ] Figure out how to do storage
+- [ ] Jellyfin deploy
