@@ -39,6 +39,9 @@ Apps are the user-facing services provided by the cluster.
 - [X] Monitoring stack
 - [X] Structure the repository
 - [X] Persist Prometheus data
-- [ ] Provision Grafana dashboards and datasources
+- [ ] Provision strava datasource
+- [ ] Provision strava dashboard
 - [ ] Figure out how to do storage
 - [ ] Jellyfin deploy
+- [ ] Multiple users on strava dashboard
+- [ ] Provision custom Kubernetes dashboard
