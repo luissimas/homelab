@@ -40,6 +40,7 @@ spec:
           angular_support_enabled: false
     prometheus:
       prometheusSpec:
+        retention: 24w
         storageSpec:
           volumeClaimTemplate:
             spec:
