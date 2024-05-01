@@ -6,7 +6,7 @@ metadata:
 spec:
   chart:
     spec:
-      chart: device-plugin-operator
+      chart: intel-device-plugins-operator
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
