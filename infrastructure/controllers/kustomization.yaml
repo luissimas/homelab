@@ -4,3 +4,4 @@ resources:
   - cert-manager
   - sealed-secrets
   - reflector
+  - node-feature-discovery
