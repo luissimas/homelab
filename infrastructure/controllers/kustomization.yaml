@@ -5,3 +5,4 @@ resources:
   - sealed-secrets
   - reflector
   - node-feature-discovery
+  - intel-device-plugin
