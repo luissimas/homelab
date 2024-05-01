@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: jellyfin
+  namespace: jellyfin
+spec:
+  tls:
+    - hosts:
+        - jellyfin.totorinho.duckdns.org
+      secretName: duckdns-wildcard-cert-totorinho.duckdns.org
+  rules:
+    - host: jellyfin.totorinho.duckdns.org
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: jellyfin
+                port:
+                  number: 8096

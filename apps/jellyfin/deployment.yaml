@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jellyfin
+  namespace: jellyfin
+spec:
+  selector:
+    matchLabels:
+      app: jellyfin
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jellyfin
+    spec:
+      containers:
+        - name: jellyfin
+          image: lscr.io/linuxserver/jellyfin:nightly
+          ports:
+            - containerPort: 8096
+          volumeMounts:
+            - name: media
+              mountPath: "/media"
+            - name: config
+              mountPath: "/config"
+          env:
+            - name: PUID
+              value: 1000
+            - name: PGID
+              value: 1000
+            - name: TZ
+              value: America/Sao_Paulo
+      volumes:
+        - name: media
+          hostPath:
+            path: /home/padawan/homelab/media-server/media
+            type: Directory
+        - name: config
+          persistentVolumeClaim:
+            claimName: jellyfin-config
