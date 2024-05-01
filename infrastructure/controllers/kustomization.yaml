@@ -4,3 +4,5 @@ resources:
   - cert-manager
   - sealed-secrets
   - reflector
+  - node-feature-discovery
+  - intel-device-plugin
