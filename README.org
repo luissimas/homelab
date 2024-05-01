@@ -7,17 +7,18 @@ My Homelab setup running as a [[https://k3s.io/][K3S]] cluster.
 - Secrets should be safely stored in the repository
 - SSL certificates for all services
 - Monitoring stack with Prometheus and Grafana
+- GPU pass-through for hardware acceleration
+- Expose services to the outside world
+- Monitor all deployed applications
+- Reliable storage
+- Monitoring alerts
 
 * Repository structure
 The repository structure follows the Flux recommendations, but I've also added an extra layer to provide a better separation of concerns. The idea is to have the following dependency graph
 
 #+begin_example
               ┌───►Apps
-              │
-              │
 Infrastructure│
-              │
-              │
               └───►Core Services
 #+end_example
 
@@ -27,25 +28,69 @@ Core services are composed of the administrative services exposed from the clust
 
 Apps are the user-facing services provided by the cluster.
 
-* TODO
+* TODO General infrastructure [3/5]
+** DONE Flux [4/4]
+CLOSED: [2024-05-01 Wed 20:10]
 - [X] GitOps setup with Flux
-- [X] Secrets management
 - [X] Manifests validation in CI
 - [X] Ensure bootstrap order is correct
-- [X] SSL certificates
 - [X] Flux UI
+** DONE Secrets [1/1]
+CLOSED: [2024-05-01 Wed 20:10]
+- [X] Secrets management
+** DONE SSL Certificates [6/6]
+CLOSED: [2024-05-01 Wed 20:10]
+- [X] SSL certificates
 - [X] Secrets replication for certificates
 - [X] SSL certificate prod
 - [X] Monitoring stack
 - [X] Structure the repository
 - [X] Persist Prometheus data
+** TODO Expose cluster [0/2]
+- [ ] Research Cloudflare tunnel vs VPN
+- [ ] Implement solution
+** TODO Storage [1/5]
 - [X] Figure out how to do storage
 - [ ] Longhorn basic setup
 - [ ] Longhorn UI
 - [ ] Multiple disks on longhorn
 - [ ] Monitor longhorn with prometheus
-- [ ] Jellyfin deploy
+
+[[https://github.com/longhorn/longhorn/issues/265][How to migrate data to longhorn volumes]]
+* TODO Monitoring [1/6]
+- [X] kube-prometheus-stack deploy
+- [ ] Alertmanager setup
 - [ ] Provision strava datasource
 - [ ] Provision strava dashboard
 - [ ] Multiple users on strava dashboard
 - [ ] Provision custom Kubernetes dashboard
+* TODO Services [0/11]
+** TODO Jellyfin [2/3]
+- [X] Deploy
+- [X] Gpu acceleration
+- [ ] Media folder on dedicated drive
+** TODO Homepage
+** TODO Pihole [0/2]
+- [ ] Deploy
+- [ ] Monitoring
+** TODO Prowlarr [0/2]
+- [ ] Deploy
+- [ ] Monitoring
+** TODO QbitTorrent [0/2]
+- [ ] Deploy
+- [ ] Monitoring
+** TODO Radarr [0/2]
+- [ ] Deploy
+- [ ] Monitoring
+** TODO Sonarr [0/2]
+- [ ] Deploy
+- [ ] Monitoring
+** TODO Readarr [0/2]
+- [ ] Deploy
+- [ ] Monitoring
+** TODO Calibre [0/2]
+- [ ] Deploy
+- [ ] Monitoring
+** TODO Bazarr [0/2]
+- [ ] Deploy
+- [ ] Monitoring
