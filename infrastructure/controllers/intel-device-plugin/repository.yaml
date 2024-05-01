@@ -1,7 +1,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: intel-device-plugin
+  name: intel-device-plugin-operator
   namespace: intel-device-plugin
 spec:
   interval: 1h0m0s
