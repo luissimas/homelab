@@ -16,6 +16,9 @@ spec:
       containers:
         - name: jellyfin
           image: lscr.io/linuxserver/jellyfin:nightly
+          resources:
+            limits:
+              gpu.intel.com/i915: "1"
           ports:
             - containerPort: 8096
           volumeMounts:
