@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: qbittorrent
+  namespace: media
+spec:
+  tls:
+    - hosts:
+        - qbittorrent.totorinho.duckdns.org
+      secretName: duckdns-wildcard-cert-totorinho.duckdns.org
+  rules:
+    - host: qbittorrent.totorinho.duckdns.org
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: qbittorrent
+                port:
+                  number: 8080

@@ -98,8 +98,10 @@ Apps are the user-facing services provided by the cluster.
 
 ### Prowlarr
 
-- [ ] Deploy
+- [X] Deploy
 - [ ] Monitoring
+
+https://github.com/onedr0p/exportarr
 
 ### QbitTorrent
 
