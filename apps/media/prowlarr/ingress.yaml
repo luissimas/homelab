@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: prowlarr
+  namespace: media
+spec:
+  tls:
+    - hosts:
+        - prowlarr.totorinho.duckdns.org
+      secretName: duckdns-wildcard-cert-totorinho.duckdns.org
+  rules:
+  - host: prowlarr.totorinho.duckdns.org
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: prowlarr
+            port:
+              number: 9696
