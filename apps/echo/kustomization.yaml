@@ -1,9 +1,0 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-resources:
-  - echo.yaml
-  - echo2.yaml
-  - namespace.yaml
-  - nginx.yaml
-  - storage-test.yaml
-  - test-secret-sealed.yaml
