@@ -4,9 +4,9 @@ metadata:
   name: jellyfin-config
   namespace: media
 spec:
+  storageClassName: local-path
   accessModes:
     - ReadWriteOnce
-  storageClassName: local-path
   resources:
     requests:
       storage: 500Mi
