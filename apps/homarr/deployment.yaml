@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: homarr
+  namespace: homarr
+spec:
+  selector:
+    matchLabels:
+      app: homarr
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: homarr
+    spec:
+      containers:
+        - name: homarr
+          image: ghcr.io/ajnart/homarr:latest
+          ports:
+            - containerPort: 7575
+          volumeMounts:
+            - name: config
+              mountPath: /app/data/configs
+            - name: database
+              mountPath: /app/database
+            - name: icons
+              mountPath: /app/public/icons
+          env:
+            - name: DISABLE_ANALYTICS
+              value: true
+            - name: TZ
+              value: America/Sao_Paulo
+      volumes:
+        - name: config
+          persistentVolumeClaim:
+            claimName: config
+        - name: database
+          persistentVolumeClaim:
+            claimName: database
+        - name: icons
+          persistentVolumeClaim:
+            claimName: icons
