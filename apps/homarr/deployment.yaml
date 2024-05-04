@@ -27,7 +27,7 @@ spec:
               mountPath: /app/public/icons
           env:
             - name: DISABLE_ANALYTICS
-              value: true
+              value: "true"
             - name: TZ
               value: America/Sao_Paulo
       volumes:
