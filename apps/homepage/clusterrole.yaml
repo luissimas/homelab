@@ -23,6 +23,13 @@ rules:
       - get
       - list
   - apiGroups:
+      - traefik.io
+    resources:
+      - ingressroutes
+    verbs:
+      - get
+      - list
+  - apiGroups:
       - traefik.containo.us
     resources:
       - ingressroutes
