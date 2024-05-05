@@ -3,6 +3,12 @@ kind: Ingress
 metadata:
   name: jellyfin
   namespace: media
+  annotations:
+    gethomepage.dev/name: Jellyfin
+    gethomepage.dev/description: Media server
+    gethomepage.dev/enabled: "true"
+    gethomepage.dev/group: Media
+    gethomepage.dev/icon: jellyfin.png
 spec:
   tls:
     - hosts:
