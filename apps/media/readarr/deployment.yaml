@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: readarr
-        image: lscr.io/linuxserver/readarr:latest
+        image: lscr.io/linuxserver/readarr:develop
         ports:
         - containerPort: 8787
           name: readarr
