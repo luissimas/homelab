@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sonarr
+  namespace: media
+spec:
+  tls:
+    - hosts:
+        - sonarr.totorinho.duckdns.org
+      secretName: duckdns-wildcard-cert-totorinho.duckdns.org
+  rules:
+  - host: sonarr.totorinho.duckdns.org
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: sonarr
+            port:
+              number: 8989
