@@ -94,6 +94,8 @@ Apps are the user-facing services provided by the cluster.
 ### Homepage
 
 - [X] Deploy
+- [ ] Settings
+- [ ] Annotations
 - [ ] Widgets
 
 ### Prowlarr
@@ -110,25 +112,25 @@ https://github.com/onedr0p/exportarr
 
 ### Radarr
 
-- [ ] Deploy
+- [X] Deploy
 - [ ] Monitoring
 
 ### Sonarr
 
-- [ ] Deploy
+- [X] Deploy
+- [ ] Monitoring
+
+### Bazarr
+
+- [X] Deploy
 - [ ] Monitoring
 
 ### Readarr
 
-- [ ] Deploy
+- [X] Deploy
 - [ ] Monitoring
 
 ### Calibre
-
-- [ ] Deploy
-- [ ] Monitoring
-
-### Bazarr
 
 - [ ] Deploy
 - [ ] Monitoring

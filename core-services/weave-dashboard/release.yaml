@@ -22,7 +22,7 @@ spec:
       username: admin
     ingress:
       enabled: true
-      ingressClassName: traefik
+      className: traefik
       hosts:
         - host: weave.totorinho.duckdns.org
           paths:
