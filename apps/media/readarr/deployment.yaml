@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: readarr
+  namespace: media
+spec:
+  selector:
+    matchLabels:
+      app: readarr
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: readarr
+    spec:
+      containers:
+      - name: readarr
+        image: lscr.io/linuxserver/readarr:latest
+        ports:
+        - containerPort: 8787
+          name: readarr
+        volumeMounts:
+        - name: books
+          mountPath: /books
+        - name: downloads
+          mountPath: /downloads
+        - name: config
+          mountPath: /config
+      volumes:
+        - name: books
+          hostPath:
+            path: /home/padawan/homelab/media-server/media/books
+            type: Directory
+        - name: downloads
+          hostPath:
+            path: /home/padawan/homelab/media-server/media/downloads
+            type: Directory
+        - name: config
+          persistentVolumeClaim:
+            claimName: readarr-config
