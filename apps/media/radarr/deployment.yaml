@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: radarr
+  namespace: media
+spec:
+  selector:
+    matchLabels:
+      app: radarr
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: radarr
+    spec:
+      containers:
+      - name: radarr
+        image: lscr.io/linuxserver/radarr:latest
+        ports:
+        - containerPort: 7878
+          name: radarr
+        volumeMounts:
+        - name: movies
+          mountPath: /movies
+        - name: downloads
+          mountPath: /downloads
+        - name: config
+          mountPath: /config
+      volumes:
+        - name: movies
+          hostPath:
+            path: /home/padawan/homelab/media-server/media/movies
+            type: Directory
+        - name: downloads
+          hostPath:
+            path: /home/padawan/homelab/media-server/media/downloads
+            type: Directory
+        - name: config
+          persistentVolumeClaim:
+            claimName: radarr-config

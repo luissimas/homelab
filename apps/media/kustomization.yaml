@@ -6,3 +6,4 @@ resources:
   - prowlarr
   - qbittorrent
   - sonarr
+  - radarr
