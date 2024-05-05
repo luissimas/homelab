@@ -29,60 +29,60 @@ data:
   services.yaml: |
     - Media:
       - Jellyfin:
-        icon: jellyfin.png
-        href: https://jellyfin.totorinho.duckdns.org
-        description: Media server.
-        namespace: media
-        app: jellyfin
+          icon: jellyfin.png
+          href: https://jellyfin.totorinho.duckdns.org
+          description: Media server.
+          namespace: media
+          app: jellyfin
       - Radarr:
-        icon: radarr.png
-        href: https://radarr.totorinho.duckdns.org
-        description: Movie management
-        namespace: media
-        app: radarr
+          icon: radarr.png
+          href: https://radarr.totorinho.duckdns.org
+          description: Movie management
+          namespace: media
+          app: radarr
       - Sonarr:
-        icon: sonarr.png
-        href: https://sonarr.totorinho.duckdns.org
-        description: Shows management
-        namespace: media
-        app: sonarr
+          icon: sonarr.png
+          href: https://sonarr.totorinho.duckdns.org
+          description: Shows management
+          namespace: media
+          app: sonarr
       - Readarr:
-        icon: readarr.png
-        href: https://readarr.totorinho.duckdns.org
-        description: Books management
-        namespace: media
-        app: readarr
+          icon: readarr.png
+          href: https://readarr.totorinho.duckdns.org
+          description: Books management
+          namespace: media
+          app: readarr
       - Bazarr:
-        icon: bazarr.png
-        href: https://bazarr.totorinho.duckdns.org
-        description: Subtitles management
-        namespace: media
-        app: bazarr
+          icon: bazarr.png
+          href: https://bazarr.totorinho.duckdns.org
+          description: Subtitles management
+          namespace: media
+          app: bazarr
       - Prowlarr:
-        icon: prowlarr.png
-        href: https://prowlarr.totorinho.duckdns.org
-        description: Indexers management
-        namespace: media
-        app: prowlarr
+          icon: prowlarr.png
+          href: https://prowlarr.totorinho.duckdns.org
+          description: Indexers management
+          namespace: media
+          app: prowlarr
       - qBittorrent:
-        icon: qbittorrent.png
-        href: https://qbittorrent.totorinho.duckdns.org
-        description: Torrent client
-        namespace: media
-        app: qbittorrent
+          icon: qbittorrent.png
+          href: https://qbittorrent.totorinho.duckdns.org
+          description: Torrent client
+          namespace: media
+          app: qbittorrent
     - Management:
       - Grafana:
-        icon: grafana.png
-        href: https://grafana.totorinho.duckdns.org
-        description: Application monitoring
-        namespace: monitoring
-        app: grafana
+          icon: grafana.png
+          href: https://grafana.totorinho.duckdns.org
+          description: Application monitoring
+          namespace: monitoring
+          app: grafana
       - Flux:
-        icon: flux-cd.png
-        href: https://weave.totorinho.duckdns.org
-        description: GitOps UI
-        namespace: flux-system
-        app: weave-dashboard-weave-gitops
+          icon: flux-cd.png
+          href: https://weave.totorinho.duckdns.org
+          description: GitOps UI
+          namespace: flux-system
+          app: weave-dashboard-weave-gitops
   widgets.yaml: |
     - kubernetes:
         cluster:
@@ -108,8 +108,8 @@ data:
         target: _blank
     - openmeteo:
         label: São Carlos
-        latitude: 22.0028
-        longitude: 47.8970
+        latitude: -22.0154
+        longitude: -47.8911
         cache: 5
         units: metric
   kubernetes.yaml: |
