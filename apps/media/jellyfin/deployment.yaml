@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: jellyfin
   namespace: media
+  labels:
+    app.kubernetes.io/name: jellyfin
 spec:
   selector:
     matchLabels:
