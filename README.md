@@ -91,7 +91,7 @@ Apps are the user-facing services provided by the cluster.
 - [x] Gpu acceleration
 - [ ] Media folder on dedicated drive
 
-### Homarr
+### Homepage
 
 - [X] Deploy
 - [ ] Widgets
@@ -105,7 +105,7 @@ https://github.com/onedr0p/exportarr
 
 ### QbitTorrent
 
-- [ ] Deploy
+- [X] Deploy
 - [ ] Monitoring
 
 ### Radarr
