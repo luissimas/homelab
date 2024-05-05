@@ -6,68 +6,83 @@ metadata:
   labels:
     app.kubernetes.io/name: homepage
 data:
-  kubernetes.yaml: |
-    mode: cluster
   settings.yaml: |
-    title: Home server
+    title: Homelab
+    useEqualHeights: true
+    headerStyle: boxedWidgets
+    language: pt
     quicklaunch:
       searchDescriptions: true
       hideInternetSearch: false
+      showSearchSuggestions: true
       hideVisitURL: true
     hideVersion: true
     showStats: true
-    statusStyle: "dot"
     layout:
       Media:
-        style: columns
+        style: row
+        columns: 4
       Management:
-        style: columns
-  custom.css: ""
-  custom.js: ""
-  bookmarks.yaml: |
-    - Developer:
-        - Github:
-            - abbr: GH
-              href: https://github.com/
+        style: row
+        columns: 4
+  bookmarks.yaml: ""
   services.yaml: |
     - Media:
-        - Jellyfin:
-            icon: jellyfin.png
-            href: https://jellyfin.totorinho.duckdns.org
-            description: Media server.
-        - Sonarr:
-            icon: sonarr.png
-            href: https://sonarr.totorinho.duckdns.org
-            description: TV Shows management
-        - Radarr:
-            icon: radarr.png
-            href: https://radarr.totorinho.duckdns.org
-            description: Movie management
-        - Bazarr:
-            icon: bazarr.png
-            href: https://bazarr.totorinho.duckdns.org
-            description: Subtitles management
-        - Readarr:
-            icon: readarr.png
-            href: https://readarr.totorinho.duckdns.org
-            description: Books management
-        - Prowlarr:
-            icon: prowlarr.png
-            href: https://prowlarr.totorinho.duckdns.org
-            description: Indexers management
-        - qBittorrent:
-            icon: qbittorrent.png
-            href: https://qbittorrent.totorinho.duckdns.org
-            description: Torrent client
+      - Jellyfin:
+        icon: jellyfin.png
+        href: https://jellyfin.totorinho.duckdns.org
+        description: Media server.
+        namespace: media
+        app: jellyfin
+      - Radarr:
+        icon: radarr.png
+        href: https://radarr.totorinho.duckdns.org
+        description: Movie management
+        namespace: media
+        app: radarr
+      - Sonarr:
+        icon: sonarr.png
+        href: https://sonarr.totorinho.duckdns.org
+        description: Shows management
+        namespace: media
+        app: sonarr
+      - Readarr:
+        icon: readarr.png
+        href: https://readarr.totorinho.duckdns.org
+        description: Books management
+        namespace: media
+        app: readarr
+      - Bazarr:
+        icon: bazarr.png
+        href: https://bazarr.totorinho.duckdns.org
+        description: Subtitles management
+        namespace: media
+        app: bazarr
+      - Prowlarr:
+        icon: prowlarr.png
+        href: https://prowlarr.totorinho.duckdns.org
+        description: Indexers management
+        namespace: media
+        app: prowlarr
+      - qBittorrent:
+        icon: qbittorrent.png
+        href: https://qbittorrent.totorinho.duckdns.org
+        description: Torrent client
+        namespace: media
+        app: qbittorrent
     - Management:
-        - Grafana:
-            icon: grafana.png
-            href: https://grafana.totorinho.duckdns.org
-            description: Application monitoring
-        - Flux:
-            icon: flux-cd.png
-            href: https://weave.totorinho.duckdns.org
-            description: GitOps UI
+      - Grafana:
+        icon: grafana.png
+        href: https://grafana.totorinho.duckdns.org
+        description: Application monitoring
+        namespace: monitoring
+        app: grafana
+      - Flux:
+        icon: flux-cd.png
+        href: https://weave.totorinho.duckdns.org
+        description: GitOps UI
+        namespace: flux-system
+        app: weave-dashboard-weave-gitops
   widgets.yaml: |
     - kubernetes:
         cluster:
@@ -97,4 +112,8 @@ data:
         longitude: 47.8970
         cache: 5
         units: metric
+  kubernetes.yaml: |
+    mode: cluster
+  custom.css: ""
+  custom.js: ""
   docker.yaml: ""
