@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bazarr
+  namespace: media
+spec:
+  selector:
+    matchLabels:
+      app: bazarr
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: bazarr
+    spec:
+      containers:
+      - name: bazarr
+        image: lscr.io/linuxserver/bazarr:latest
+        ports:
+        - containerPort: 6767
+          name: bazarr
+        volumeMounts:
+        - name: shows
+          mountPath: /tv
+        - name: movies
+          mountPath: /movies
+        - name: config
+          mountPath: /config
+      volumes:
+        - name: shows
+          hostPath:
+            path: /home/padawan/homelab/media-server/media/shows
+            type: Directory
+        - name: movies
+          hostPath:
+            path: /home/padawan/homelab/media-server/media/movies
+            type: Directory
+        - name: config
+          persistentVolumeClaim:
+            claimName: bazarr-config
