@@ -3,6 +3,13 @@ kind: Ingress
 metadata:
   name: readarr
   namespace: media
+  annotations:
+    gethomepage.dev/name: Readarr
+    gethomepage.dev/description: Books management
+    gethomepage.dev/enabled: "true"
+    gethomepage.dev/group: Media
+    gethomepage.dev/icon: readarr.png
+    gethomepage.dev/pod-selector: ""
 spec:
   tls:
     - hosts:

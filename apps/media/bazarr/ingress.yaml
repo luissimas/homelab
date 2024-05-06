@@ -3,6 +3,13 @@ kind: Ingress
 metadata:
   name: bazarr
   namespace: media
+  annotations:
+    gethomepage.dev/name: Bazarr
+    gethomepage.dev/description: Subtitles management
+    gethomepage.dev/enabled: "true"
+    gethomepage.dev/group: Media
+    gethomepage.dev/icon: bazarr.png
+    gethomepage.dev/pod-selector: ""
 spec:
   tls:
     - hosts:

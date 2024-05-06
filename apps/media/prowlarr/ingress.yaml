@@ -3,6 +3,13 @@ kind: Ingress
 metadata:
   name: prowlarr
   namespace: media
+  annotations:
+    gethomepage.dev/name: Prowlarr
+    gethomepage.dev/description: Indexers management
+    gethomepage.dev/enabled: "true"
+    gethomepage.dev/group: Media
+    gethomepage.dev/icon: prowlarr.png
+    gethomepage.dev/pod-selector: ""
 spec:
   tls:
     - hosts:

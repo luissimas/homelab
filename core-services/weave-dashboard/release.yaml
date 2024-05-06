@@ -32,5 +32,12 @@ spec:
         - secretName: duckdns-wildcard-cert-totorinho.duckdns.org
           hosts:
             - weave.totorinho.duckdns.org
+      annotations:
+        gethomepage.dev/name: Flux UI
+        gethomepage.dev/description: GitOps UI
+        gethomepage.dev/enabled: "true"
+        gethomepage.dev/group: Management
+        gethomepage.dev/icon: flux-cd.png
+        gethomepage.dev/pod-selector: ""
     metrics:
       enabled: true
