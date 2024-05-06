@@ -10,7 +10,7 @@ data:
     title: Homelab
     useEqualHeights: true
     headerStyle: boxedWidgets
-    language: pt
+    language: en
     quicklaunch:
       searchDescriptions: true
       hideInternetSearch: false
