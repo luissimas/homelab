@@ -75,6 +75,10 @@ Apps are the user-facing services provided by the cluster.
 
 [How to migrate data to longhorn volumes](https://github.com/longhorn/longhorn/issues/265)
 
+### General
+
+- [ ] Use [Recommended labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/)
+
 ## Monitoring
 
 - [x] kube-prometheus-stack deploy
