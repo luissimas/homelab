@@ -26,45 +26,7 @@ data:
         style: row
         columns: 4
   bookmarks.yaml: ""
-  services.yaml: |
-    - Media:
-      - Jellyfin:
-          icon: jellyfin.png
-          href: https://jellyfin.totorinho.duckdns.org
-          description: Media server.
-      - Radarr:
-          icon: radarr.png
-          href: https://radarr.totorinho.duckdns.org
-          description: Movie management
-      - Sonarr:
-          icon: sonarr.png
-          href: https://sonarr.totorinho.duckdns.org
-          description: Shows management
-      - Readarr:
-          icon: readarr.png
-          href: https://readarr.totorinho.duckdns.org
-          description: Books management
-      - Bazarr:
-          icon: bazarr.png
-          href: https://bazarr.totorinho.duckdns.org
-          description: Subtitles management
-      - Prowlarr:
-          icon: prowlarr.png
-          href: https://prowlarr.totorinho.duckdns.org
-          description: Indexers management
-      - qBittorrent:
-          icon: qbittorrent.png
-          href: https://qbittorrent.totorinho.duckdns.org
-          description: Torrent client
-    - Management:
-      - Grafana:
-          icon: grafana.png
-          href: https://grafana.totorinho.duckdns.org
-          description: Application monitoring
-      - Flux:
-          icon: flux-cd.png
-          href: https://weave.totorinho.duckdns.org
-          description: GitOps UI
+  services.yaml: ""
   widgets.yaml: |
     - kubernetes:
         cluster:
