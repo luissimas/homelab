@@ -94,7 +94,7 @@ Apps are the user-facing services provided by the cluster.
 ### Homepage
 
 - [X] Deploy
-- [ ] Settings
+- [X] Settings
 - [ ] Annotations
 - [ ] Widgets
 
