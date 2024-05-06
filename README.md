@@ -67,6 +67,7 @@ Apps are the user-facing services provided by the cluster.
 ### Storage
 
 - [x] Figure out how to do storage
+- [ ] Change reclaim policy for persistent volumes
 - [ ] Longhorn basic setup
 - [ ] Longhorn UI
 - [ ] Multiple disks on longhorn

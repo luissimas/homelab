@@ -38,6 +38,6 @@ spec:
         gethomepage.dev/enabled: "true"
         gethomepage.dev/group: Management
         gethomepage.dev/icon: flux-cd.png
-        gethomepage.dev/pod-selector: ""
+        gethomepage.dev/pod-selector: "app.kubernetes.io/name=weave-gitops"
     metrics:
       enabled: true
