@@ -139,3 +139,13 @@ https://github.com/onedr0p/exportarr
 
 - [ ] Deploy
 - [ ] Monitoring
+
+### CommaFeed
+
+- [ ] Deploy
+- [ ] Monitoring
+
+### Mealie
+
+- [X] Deploy
+- [ ] Monitoring

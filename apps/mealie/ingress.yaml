@@ -1,0 +1,30 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: mealie
+  namespace: mealie
+  labels:
+    app.kubernetes.io/name: mealie
+  annotations:
+    gethomepage.dev/name: Mealie
+    gethomepage.dev/description: Recipes management
+    gethomepage.dev/enabled: "true"
+    gethomepage.dev/group: Recipes
+    gethomepage.dev/icon: mealie.png
+    gethomepage.dev/pod-selector: "app.kubernetes.io/name=mealie"
+spec:
+  tls:
+    - hosts:
+        - mealie.totorinho.duckdns.org
+      secretName: duckdns-wildcard-cert-totorinho.duckdns.org
+  rules:
+    - host: mealie.totorinho.duckdns.org
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: mealie
+                port:
+                  number: 9000
