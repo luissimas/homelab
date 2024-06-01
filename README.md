@@ -61,13 +61,12 @@ Apps are the user-facing services provided by the cluster.
 
 ### Expose cluster
 
-- [ ] Research Cloudflare tunnel vs VPN
-- [ ] Implement solution
+- [X] Research Cloudflare tunnel vs VPN
+- [X] Implement solution with Tailscale
 
 ### Storage
 
 - [x] Figure out how to do storage
-- [ ] Change reclaim policy for persistent volumes
 - [ ] Longhorn basic setup
 - [ ] Longhorn UI
 - [ ] Multiple disks on longhorn
@@ -78,6 +77,8 @@ Apps are the user-facing services provided by the cluster.
 ### General
 
 - [ ] Use [Recommended labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/)
+
+https://www.youtube.com/watch?v=0CV__VnbYCc&t=205s
 
 ## Monitoring
 
@@ -100,8 +101,7 @@ Apps are the user-facing services provided by the cluster.
 
 - [X] Deploy
 - [X] Settings
-- [ ] Annotations
-- [ ] Widgets
+- [X] Annotations
 
 ### Prowlarr
 
@@ -113,7 +113,7 @@ https://github.com/onedr0p/exportarr
 ### QbitTorrent
 
 - [X] Deploy
-- [ ] Monitoring
+- [ ] Monitoring: https://github.com/esanchezm/prometheus-qbittorrent-exporter
 
 ### Radarr
 
@@ -135,17 +135,24 @@ https://github.com/onedr0p/exportarr
 - [X] Deploy
 - [ ] Monitoring
 
-### Calibre
-
-- [ ] Deploy
-- [ ] Monitoring
-
-### CommaFeed
-
-- [ ] Deploy
-- [ ] Monitoring
-
 ### Mealie
 
 - [X] Deploy
 - [ ] Monitoring
+
+### Authentik
+
+- [ ] Deploy
+- [ ] Monitoring
+
+### NextCloud
+
+- [ ] Deploy
+- [ ] Monitoring
+
+### Immich
+
+- [ ] Deploy
+- [ ] Monitoring
+
+https://github.com/immich-app/immich

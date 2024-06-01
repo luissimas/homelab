@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: immich-data
+  namespace: immich
+spec:
+  storageClassName: ""
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  claimRef:
+    name: immich-data
+    namespace: immich
+  hostPath:
+      path: /home/padawan/homelab/photos
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: immich-data
+  namespace: immich
+spec:
+  storageClassName: ""
+  volumeName: immich-data
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
