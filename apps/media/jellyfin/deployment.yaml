@@ -38,7 +38,7 @@ spec:
       volumes:
         - name: media
           hostPath:
-            path: /home/padawan/homelab/media-server/media
+            path: /home/padawan/media
             type: Directory
         - name: config
           persistentVolumeClaim:

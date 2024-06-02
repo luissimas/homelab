@@ -95,7 +95,7 @@ https://www.youtube.com/watch?v=0CV__VnbYCc&t=205s
 
 - [x] Deploy
 - [x] Gpu acceleration
-- [ ] Media folder on dedicated drive
+- [x] Media folder on dedicated drive
 
 ### Homepage
 
@@ -152,7 +152,5 @@ https://github.com/onedr0p/exportarr
 
 ### Immich
 
-- [ ] Deploy
+- [X] Deploy
 - [ ] Monitoring
-
-https://github.com/immich-app/immich

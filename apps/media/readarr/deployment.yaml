@@ -29,11 +29,11 @@ spec:
       volumes:
         - name: books
           hostPath:
-            path: /home/padawan/homelab/media-server/media/books
+            path: /home/padawan/media/books
             type: Directory
         - name: downloads
           hostPath:
-            path: /home/padawan/homelab/media-server/media/downloads
+            path: /media/downloads
             type: Directory
         - name: config
           persistentVolumeClaim:
