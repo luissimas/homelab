@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: octobot
+  namespace: octobot
+  labels:
+    app.kubernetes.io/name: octobot
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: octobot
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: octobot
+    spec:
+      containers:
+        - name: octobot
+          image: "drakkarsoftware/octobot:stable"
+          ports:
+            - name: http
+              containerPort: 5001
+              protocol: TCP
+          volumeMounts:
+            - mountPath: /octobot/tentacles
+              name: tentacles
+            - mountPath: /octobot/user
+              name: user
+            - mountPath: /octobot/logs
+              name: logs
+      volumes:
+        - name: tentacles
+          persistentVolumeClaim:
+            claimName: octobot-tentacles
+        - name: user
+          persistentVolumeClaim:
+            claimName: octobot-user
+        - name: logs
+          emptyDir: {}
