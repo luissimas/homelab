@@ -1,6 +1,8 @@
+# Homelab
+
 My Homelab setup running as a [K3S](https://k3s.io/) cluster.
 
-# Goals
+## Goals
 
 - GitOps: everything should be deployed and reproducible with Flux
 - Secrets should be safely stored in the repository
@@ -12,7 +14,7 @@ My Homelab setup running as a [K3S](https://k3s.io/) cluster.
 - Reliable storage
 - Monitoring alerts
 
-# Repository structure
+## Repository structure
 
 The repository structure follows the Flux recommendations, but I've
 also added an extra layer to provide a better separation of concerns.
@@ -35,22 +37,22 @@ stacks.
 
 Apps are the user-facing services provided by the cluster.
 
-# TODO 
+## TODO 
 
-## General infrastructure
+### General infrastructure
 
-### Flux
+#### Flux
 
 - [x] GitOps setup with Flux
 - [x] Manifests validation in CI
 - [x] Ensure bootstrap order is correct
 - [x] Flux UI
 
-### Secrets
+#### Secrets
 
 - [x] Secrets management
 
-### SSL Certificates
+#### SSL Certificates
 
 - [x] SSL certificates
 - [x] Secrets replication for certificates
@@ -59,12 +61,12 @@ Apps are the user-facing services provided by the cluster.
 - [x] Structure the repository
 - [x] Persist Prometheus data
 
-### Expose cluster
+#### Expose cluster
 
 - [X] Research Cloudflare tunnel vs VPN
 - [X] Implement solution with Tailscale
 
-### Storage
+#### Storage
 
 - [x] Figure out how to do storage
 - [ ] Longhorn basic setup
@@ -74,13 +76,13 @@ Apps are the user-facing services provided by the cluster.
 
 [How to migrate data to longhorn volumes](https://github.com/longhorn/longhorn/issues/265)
 
-### General
+#### General
 
 - [ ] Use [Recommended labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/)
 
 https://www.youtube.com/watch?v=0CV__VnbYCc&t=205s
 
-## Monitoring
+### Monitoring
 
 - [x] kube-prometheus-stack deploy
 - [ ] Alertmanager setup
@@ -89,68 +91,68 @@ https://www.youtube.com/watch?v=0CV__VnbYCc&t=205s
 - [ ] Multiple users on strava dashboard
 - [ ] Provision custom Kubernetes dashboard
 
-## Services
+### Services
 
-### Jellyfin
+#### Jellyfin
 
 - [x] Deploy
 - [x] Gpu acceleration
 - [x] Media folder on dedicated drive
 
-### Homepage
+#### Homepage
 
 - [X] Deploy
 - [X] Settings
 - [X] Annotations
 
-### Prowlarr
+#### Prowlarr
 
 - [X] Deploy
 - [ ] Monitoring
 
 https://github.com/onedr0p/exportarr
 
-### QbitTorrent
+#### QbitTorrent
 
 - [X] Deploy
 - [ ] Monitoring: https://github.com/esanchezm/prometheus-qbittorrent-exporter
 
-### Radarr
+#### Radarr
 
 - [X] Deploy
 - [ ] Monitoring
 
-### Sonarr
+#### Sonarr
 
 - [X] Deploy
 - [ ] Monitoring
 
-### Bazarr
+#### Bazarr
 
 - [X] Deploy
 - [ ] Monitoring
 
-### Readarr
+#### Readarr
 
 - [X] Deploy
 - [ ] Monitoring
 
-### Mealie
+#### Mealie
 
 - [X] Deploy
 - [ ] Monitoring
 
-### Authentik
+#### Authentik
 
 - [ ] Deploy
 - [ ] Monitoring
 
-### NextCloud
+#### NextCloud
 
 - [ ] Deploy
 - [ ] Monitoring
 
-### Immich
+#### Immich
 
 - [X] Deploy
 - [ ] Monitoring
