@@ -42,7 +42,6 @@ spec:
         size: 10Gi
       plugins:
         - grafana-strava-datasource
-      envFromSecret: grafana-env
       grafana.ini:
         security:
           angular_support_enabled: false
