@@ -41,7 +41,7 @@ spec:
       bucket: default
       user: admin
       retention_policy: "0s"
-      existingSecret: influxdb-auth-secret
+      existingSecret: influxdb-auth
     initScripts:
       enabled: true
       scripts:
