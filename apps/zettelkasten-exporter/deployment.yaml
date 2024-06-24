@@ -18,6 +18,7 @@ spec:
       containers:
         - name: zettelkasten-exporter
           image: "ghcr.io/luissimas/zettelkasten-exporter:latest"
+          imagePullPolicy: Always
           env:
           - name: LOG_LEVEL
             value: INFO
