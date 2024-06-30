@@ -44,3 +44,5 @@ spec:
         enabled: true
       serviceMonitor:
         enabled: true
+      selfMonitoring:
+        enabled: true
