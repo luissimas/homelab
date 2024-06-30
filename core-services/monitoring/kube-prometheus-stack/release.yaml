@@ -45,6 +45,14 @@ spec:
       grafana.ini:
         security:
           angular_support_enabled: false
+      additionalDataSources:
+        - name: Loki
+          type: loki
+          access: proxy
+          url: http://loki-gateway
+          jsonData:
+            timeout: 60
+            maxLines: 1000
     prometheus:
       prometheusSpec:
         retention: 24w
