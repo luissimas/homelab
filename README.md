@@ -90,6 +90,8 @@ https://www.youtube.com/watch?v=0CV__VnbYCc&t=205s
 - [ ] Provision strava dashboard
 - [ ] Multiple users on strava dashboard
 - [ ] Provision custom Kubernetes dashboard
+- [X] Loki setup
+- [X] Monitor loki and promtail
 
 ### Services
 
