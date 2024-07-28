@@ -1,0 +1,30 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: traggo
+  namespace: traggo
+  labels:
+    app.kubernetes.io/name: traggo
+  annotations:
+    gethomepage.dev/name: traggo
+    gethomepage.dev/description: Time tracking
+    gethomepage.dev/enabled: "true"
+    gethomepage.dev/group: Time
+    gethomepage.dev/icon: traggo.svg
+    gethomepage.dev/pod-selector: "app.kubernetes.io/name=traggo"
+spec:
+  tls:
+    - hosts:
+        - traggo.totorinho.duckdns.org
+      secretName: duckdns-wildcard-cert-totorinho.duckdns.org
+  rules:
+    - host: traggo.totorinho.duckdns.org
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: traggo
+                port:
+                  number: 3030
