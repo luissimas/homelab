@@ -1,0 +1,26 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: victoriametrics
+  namespace: monitoring
+spec:
+  chart:
+    spec:
+      chart: victoria-metrics-single
+      version: 0.9.x
+      sourceRef:
+        kind: HelmRepository
+        name: victoriametrics
+  interval: 1h0m0s
+  releaseName: victoria-metrics-single
+  targetNamespace: monitoring
+  values:
+    server:
+      retentionPeriod: 60 # 5y
+      persistentVolume:
+        enabled: true
+        accessModes:
+          - ReadWriteOnce
+        storageClass: local-path
+        mountPath: /storage
+        size: 10Gi
