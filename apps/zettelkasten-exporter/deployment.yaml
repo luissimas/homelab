@@ -33,14 +33,5 @@ spec:
               secretKeyRef:
                 name: zettelkasten-exporter-env
                 key: github-token
-          - name: INFLUXDB_URL
-            value: http://influxdb-influxdb2
-          - name: INFLUXDB_ORG
-            value: homelab
-          - name: INFLUXDB_BUCKET
-            value: zettelkasten
-          - name: INFLUXDB_TOKEN
-            valueFrom:
-              secretKeyRef:
-                name: zettelkasten-exporter-env
-                key: influxdb-token
+          - name: VICTORIAMETRICS_URL
+            value: http://victoria-metrics-single-server:8428
