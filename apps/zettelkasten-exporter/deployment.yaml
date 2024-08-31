@@ -22,6 +22,8 @@ spec:
           env:
           - name: LOG_LEVEL
             value: INFO
+          - name: IGNORE_FILES
+            value: .git,.obsidian,.trash,.quartz,README.md
           - name: COLLECTION_INTERVAL
             value: 1h
           - name: ZETTELKASTEN_GIT_URL
