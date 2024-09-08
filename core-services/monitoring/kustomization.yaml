@@ -4,7 +4,7 @@ resources:
   - namespace.yaml
   - grafana-repository.yaml
   - kube-prometheus-stack
-  - influxdb
+  # - influxdb
   - victoriametrics
   - loki
   - promtail
