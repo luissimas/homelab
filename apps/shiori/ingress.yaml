@@ -1,0 +1,30 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: shiori
+  namespace: shiori
+  labels:
+    app.kubernetes.io/name: shiori
+  annotations:
+    gethomepage.dev/name: shiori
+    gethomepage.dev/description: Bookmarks manager
+    gethomepage.dev/enabled: "true"
+    gethomepage.dev/group: Media
+    gethomepage.dev/icon: shiori.png
+    gethomepage.dev/pod-selector: "app.kubernetes.io/name=shiori"
+spec:
+  tls:
+    - hosts:
+        - shiori.totorinho.duckdns.org
+      secretName: duckdns-wildcard-cert-totorinho.duckdns.org
+  rules:
+    - host: shiori.totorinho.duckdns.org
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: shiori
+                port:
+                  number: 8080
