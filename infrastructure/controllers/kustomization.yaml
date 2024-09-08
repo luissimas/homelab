@@ -6,3 +6,4 @@ resources:
   - reflector
   - node-feature-discovery
   - intel-device-plugin
+  - cloudnative-pg
