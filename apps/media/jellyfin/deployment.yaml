@@ -18,9 +18,12 @@ spec:
       containers:
         - name: jellyfin
           image: lscr.io/linuxserver/jellyfin:nightly
-          resources:
-            limits:
-              gpu.intel.com/i915: "1"
+          # TODO: the intel-device-plugin currently fails to start, which makes
+          # the jellyfin deployment fail because the GPU is not detected in the
+          # node.
+          # resources:
+          #   limits:
+          #     gpu.intel.com/i915: "1"
           ports:
             - containerPort: 8096
           volumeMounts:
