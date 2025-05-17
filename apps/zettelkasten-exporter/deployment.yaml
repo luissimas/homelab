@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: zettelkasten-exporter
-          image: ghcr.io/luissimas/zettelkasten-exporter:0.3.2
+          image: ghcr.io/luissimas/zettelkasten-exporter:0.3.3
           imagePullPolicy: Always
           env:
           - name: LOG_LEVEL
