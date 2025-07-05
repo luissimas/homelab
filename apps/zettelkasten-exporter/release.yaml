@@ -1,0 +1,38 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: zettelkasten-exporter
+  namespace: zettelkasten-exporter
+spec:
+  chart:
+    spec:
+      chart: zettelkasten-exporter
+      version: 0.4.0
+      sourceRef:
+        kind: HelmRepository
+        name: zettelkasten-exporter
+  interval: 1h0m0s
+  releaseName: zettelkasten-exporter
+  targetNamespace: monitoring
+  values:
+    collectionInterval: 1h
+    collectHistoricalMetrics: true
+    logLevel: "INFO"
+    zettelkasten:
+      directory: ""
+      git:
+        url: https://github.com/luissimas/zettelkasten
+        branch: master
+      existingSecret:
+        name: zettelkasten-exporter-env
+        key: github-token
+      ignoreFiles:
+        - .git
+        - .obsidian
+        - .trash
+        - .quartz
+        - README.md
+    vm:
+      enabled: true
+    grafana:
+      enabled: false
