@@ -34,5 +34,14 @@ spec:
         - README.md
     vm:
       enabled: true
+      server:
+        retentionPeriod: 60 # 5y
+        persistentVolume:
+          enabled: true
+          accessModes:
+            - ReadWriteOnce
+          storageClass: local-path
+          mountPath: /storage
+          size: 10Gi
     grafana:
       enabled: false
