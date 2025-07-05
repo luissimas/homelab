@@ -7,4 +7,4 @@ metadata:
 spec:
   type: oci
   interval: 5m0s
-  url: oci://ghcr.io/luissimas/zettelkasten-exporter
+  url: oci://ghcr.io/luissimas/zettelkasten-exporter-chart
