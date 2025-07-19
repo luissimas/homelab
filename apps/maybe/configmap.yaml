@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: maybe-env
+  namespace: maybe
+  labels:
+    app.kubernetes.io/name: maybe
+data:
+  SELF_HOSTED: "true"
+  RAILS_FORCE_SSL: "false"
+  RAILS_ASSUME_SSL: "false"
+  REDIS_URL: redis://redis:6379/0
