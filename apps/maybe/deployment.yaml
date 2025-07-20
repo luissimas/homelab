@@ -15,13 +15,26 @@ spec:
       labels:
         app.kubernetes.io/name: maybe
     spec:
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 1000
+        fsGroup: 1000
       containers:
         - name: web
           image: "ghcr.io/maybe-finance/maybe:latest"
+          securityContext:
+            allowPrivilegeEscalation: false
           ports:
             - name: http
               containerPort: 3000
               protocol: TCP
+          resources:
+            requests:
+              cpu: 0.1
+              memory: 256Mi
+            limits:
+              cpu: 0.25
+              memory: 512Mi
           envFrom:
             - configMapRef:
                 name: maybe-env
@@ -62,6 +75,8 @@ spec:
         - name: worker
           image: "ghcr.io/maybe-finance/maybe:latest"
           command: ["bundle", "exec", "sidekiq"]
+          securityContext:
+            allowPrivilegeEscalation: false
           envFrom:
             - configMapRef:
                 name: maybe-env
@@ -96,6 +111,13 @@ spec:
                 secretKeyRef:
                   name: maybe-key
                   key: secret-key
+          resources:
+            requests:
+              cpu: 0.1
+              memory: 256Mi
+            limits:
+              cpu: 0.25
+              memory: 512Mi
       volumes:
         - name: storage
           persistentVolumeClaim:
