@@ -32,6 +32,9 @@ data:
                   - url: https://carlosbecker.com/posts/index.xml
                     title: Carlos Becker
                     limit: 4
+                  - url: https://thesquareplanet.com/feed.xml
+                    title: Jon Gjengset
+                    limit: 4
 
           - size: full
             widgets:
