@@ -60,33 +60,21 @@ data:
                   - title: Bazarr
                     url: https://bazarr.totorinho.duckdns.org
                     icon: sh:bazarr
-                  - title: Immich
-                    url: https://immich.totorinho.duckdns.org
-                    icon: sh:immich
                   - title: Mealie
                     url: https://mealie.totorinho.duckdns.org
                     icon: sh:mealie
                   - title: Grafana
                     url: https://grafana.totorinho.duckdns.org
                     icon: sh:grafana
-                  - title: Traggo
-                    url: https://traggo.totorinho.duckdns.org
-                    icon: https://github.com/homarr-labs/dashboard-icons/blob/main/svg/traggo.svg
                   - title: Headlamp
                     url: https://headlamp.totorinho.duckdns.org
                     icon: sh:headlamp
-                  - title: Maybe
-                    url: https://maybe.totorinho.duckdns.org
-                    icon: sh:maybe
                   - title: Readarr
                     url: https://readarr.totorinho.duckdns.org
                     icon: sh:readarr
                   - title: Prowlarr
                     url: https://prowlarr.totorinho.duckdns.org
                     icon: sh:prowlarr
-                  - title: Shiori
-                    url: https://shiori.totorinho.duckdns.org
-                    icon: https://github.com/homarr-labs/dashboard-icons/blob/main/svg/shiori.svg
 
           - size: small
             widgets:
