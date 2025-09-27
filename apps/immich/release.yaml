@@ -15,6 +15,7 @@ spec:
   releaseName: immich
   targetNamespace: immich
   values:
+    useDeprecatedPostgresChart: true
     immich:
       metrics:
         enabled: true
