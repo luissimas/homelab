@@ -71,7 +71,7 @@ data:
                     icon: sh:grafana
                   - title: Traggo
                     url: https://traggo.totorinho.duckdns.org
-                    icon: sh:traggo
+                    icon: di:traggo
                   - title: Headlamp
                     url: https://headlamp.totorinho.duckdns.org
                     icon: sh:headlamp
@@ -86,7 +86,7 @@ data:
                     icon: sh:prowlarr
                   - title: Shiori
                     url: https://shiori.totorinho.duckdns.org
-                    icon: sh:shiori
+                    icon: di:shiori
 
           - size: small
             widgets:
