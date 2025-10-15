@@ -63,18 +63,23 @@ data:
                   - title: Mealie
                     url: https://mealie.totorinho.duckdns.org
                     icon: sh:mealie
-                  - title: Grafana
-                    url: https://grafana.totorinho.duckdns.org
-                    icon: sh:grafana
-                  - title: Headlamp
-                    url: https://headlamp.totorinho.duckdns.org
-                    icon: sh:headlamp
                   - title: Readarr
                     url: https://readarr.totorinho.duckdns.org
                     icon: sh:readarr
                   - title: Prowlarr
                     url: https://prowlarr.totorinho.duckdns.org
                     icon: sh:prowlarr
+
+              - type: monitor
+                cache: 1m
+                title: Management
+                sites:
+                  - title: Grafana
+                    url: https://grafana.totorinho.duckdns.org
+                    icon: sh:grafana
+                  - title: Headlamp
+                    url: https://headlamp.totorinho.duckdns.org
+                    icon: sh:headlamp
 
           - size: small
             widgets:
