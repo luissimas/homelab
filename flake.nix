@@ -19,6 +19,7 @@
             kubectl
             kubeval
             kubeseal
+            velero
           ];
         };
       });
