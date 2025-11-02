@@ -3,26 +3,19 @@ kind: Ingress
 metadata:
   name: radarr
   namespace: media
-  annotations:
-    gethomepage.dev/name: Radarr
-    gethomepage.dev/description: Movies management
-    gethomepage.dev/enabled: "true"
-    gethomepage.dev/group: Media
-    gethomepage.dev/icon: radarr.png
-    gethomepage.dev/pod-selector: "app=radarr"
 spec:
   tls:
     - hosts:
         - radarr.totorinho.duckdns.org
       secretName: duckdns-wildcard-cert-totorinho.duckdns.org
   rules:
-  - host: radarr.totorinho.duckdns.org
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: radarr
-            port:
-              number: 7878
+    - host: radarr.totorinho.duckdns.org
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: radarr
+                port:
+                  number: 7878

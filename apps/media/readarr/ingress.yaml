@@ -3,26 +3,19 @@ kind: Ingress
 metadata:
   name: readarr
   namespace: media
-  annotations:
-    gethomepage.dev/name: Readarr
-    gethomepage.dev/description: Books management
-    gethomepage.dev/enabled: "true"
-    gethomepage.dev/group: Media
-    gethomepage.dev/icon: readarr.png
-    gethomepage.dev/pod-selector: "app=readarr"
 spec:
   tls:
     - hosts:
         - readarr.totorinho.duckdns.org
       secretName: duckdns-wildcard-cert-totorinho.duckdns.org
   rules:
-  - host: readarr.totorinho.duckdns.org
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: readarr
-            port:
-              number: 8787
+    - host: readarr.totorinho.duckdns.org
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: readarr
+                port:
+                  number: 8787

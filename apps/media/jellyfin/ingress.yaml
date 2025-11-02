@@ -5,13 +5,6 @@ metadata:
   namespace: media
   labels:
     app.kubernetes.io/name: jellyfin
-  annotations:
-    gethomepage.dev/name: Jellyfin
-    gethomepage.dev/description: Media server
-    gethomepage.dev/enabled: "true"
-    gethomepage.dev/group: Media
-    gethomepage.dev/icon: jellyfin.png
-    gethomepage.dev/pod-selector: "app=jellyfin"
 spec:
   tls:
     - hosts:

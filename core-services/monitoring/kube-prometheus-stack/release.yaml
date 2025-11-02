@@ -28,12 +28,6 @@ spec:
             hosts:
               - grafana.totorinho.duckdns.org
         annotations:
-          gethomepage.dev/name: Grafana
-          gethomepage.dev/description: Application monitoring
-          gethomepage.dev/enabled: "true"
-          gethomepage.dev/group: Management
-          gethomepage.dev/icon: grafana.png
-          gethomepage.dev/pod-selector: "app.kubernetes.io/name=grafana"
       persistence:
         enabled: true
         type: pvc

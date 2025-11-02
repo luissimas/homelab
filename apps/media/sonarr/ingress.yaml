@@ -3,26 +3,19 @@ kind: Ingress
 metadata:
   name: sonarr
   namespace: media
-  annotations:
-    gethomepage.dev/name: Sonarr
-    gethomepage.dev/description: Shows management
-    gethomepage.dev/enabled: "true"
-    gethomepage.dev/group: Media
-    gethomepage.dev/icon: sonarr.png
-    gethomepage.dev/pod-selector: "app=sonarr"
 spec:
   tls:
     - hosts:
         - sonarr.totorinho.duckdns.org
       secretName: duckdns-wildcard-cert-totorinho.duckdns.org
   rules:
-  - host: sonarr.totorinho.duckdns.org
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: sonarr
-            port:
-              number: 8989
+    - host: sonarr.totorinho.duckdns.org
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: sonarr
+                port:
+                  number: 8989

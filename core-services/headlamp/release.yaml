@@ -26,12 +26,6 @@ spec:
           hosts:
             - headlamp.totorinho.duckdns.org
       annotations:
-        gethomepage.dev/name: Headlamp UI
-        gethomepage.dev/description: Kubernetes UI
-        gethomepage.dev/enabled: "true"
-        gethomepage.dev/group: Management
-        gethomepage.dev/icon: kubernetes.png
-        gethomepage.dev/pod-selector: "app.kubernetes.io/name=headlamp"
     config:
       pluginsDir: /build/plugins
     initContainers:
