@@ -13,6 +13,7 @@ spec:
         name: vmware-tanzu
   interval: 1h0m0s
   values:
+    snapshotsEnabled: false
     credentials:
       existingSecret: cloud-credentials
     configuration:
