@@ -21,6 +21,9 @@ spec:
         - name: default
           provider: azure
           bucket: velero
+          config:
+            resourceGroup: homelab
+            storageAccount: homelabn644edmi6woce
     initContainers:
       - name: velero-plugin-for-microsoft-azure
         image: velero/velero-plugin-for-microsoft-azure:v1.13.0
