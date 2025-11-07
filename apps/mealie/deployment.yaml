@@ -14,6 +14,8 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/name: mealie
+      annotations:
+        backup.velero.io/backup-volumes: mealie-data
     spec:
       containers:
         - name: mealie
