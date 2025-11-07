@@ -14,13 +14,17 @@ spec:
   interval: 1h0m0s
   values:
     snapshotsEnabled: false
+    deployNodeAgent: true
     credentials:
       existingSecret: cloud-credentials
     configuration:
       backupStorageLocation:
-        - name: default
+        - name: azure-blob
           provider: azure
           bucket: velero
+          credential:
+            name: cloud-credentials
+            key: cloud
           config:
             resourceGroup: homelab
             storageAccount: homelabn644edmi6woce
