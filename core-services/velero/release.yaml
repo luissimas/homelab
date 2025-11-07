@@ -19,7 +19,7 @@ spec:
       existingSecret: cloud-credentials
     configuration:
       backupStorageLocation:
-        - name: azure-blob
+        - name: default
           provider: azure
           bucket: velero
           credential:
