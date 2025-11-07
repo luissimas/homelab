@@ -28,6 +28,8 @@ spec:
           config:
             resourceGroup: homelab
             storageAccount: homelabn644edmi6woce
+            storageAccountKeyEnvVar: AZURE_STORAGE_ACCOUNT_ACCESS_KEY
+            subscriptionId: 6e581fae-0118-4a2b-81b4-2b8ffb1a5915
     initContainers:
       - name: velero-plugin-for-microsoft-azure
         image: velero/velero-plugin-for-microsoft-azure:v1.13.0
