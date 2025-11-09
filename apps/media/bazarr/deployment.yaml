@@ -12,20 +12,22 @@ spec:
     metadata:
       labels:
         app: bazarr
+      annotations:
+        backup.velero.io/backup-volumes: bazarr-config
     spec:
       containers:
-      - name: bazarr
-        image: lscr.io/linuxserver/bazarr:latest
-        ports:
-        - containerPort: 6767
-          name: bazarr
-        volumeMounts:
-        - name: shows
-          mountPath: /tv
-        - name: movies
-          mountPath: /movies
-        - name: config
-          mountPath: /config
+        - name: bazarr
+          image: lscr.io/linuxserver/bazarr:latest
+          ports:
+            - containerPort: 6767
+              name: bazarr
+          volumeMounts:
+            - name: shows
+              mountPath: /tv
+            - name: movies
+              mountPath: /movies
+            - name: config
+              mountPath: /config
       volumes:
         - name: shows
           hostPath:

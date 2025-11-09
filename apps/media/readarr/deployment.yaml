@@ -12,20 +12,22 @@ spec:
     metadata:
       labels:
         app: readarr
+      annotations:
+        backup.velero.io/backup-volumes: readarr-config
     spec:
       containers:
-      - name: readarr
-        image: lscr.io/linuxserver/readarr:develop
-        ports:
-        - containerPort: 8787
-          name: readarr
-        volumeMounts:
-        - name: books
-          mountPath: /books
-        - name: downloads
-          mountPath: /downloads
-        - name: config
-          mountPath: /config
+        - name: readarr
+          image: lscr.io/linuxserver/readarr:develop
+          ports:
+            - containerPort: 8787
+              name: readarr
+          volumeMounts:
+            - name: books
+              mountPath: /books
+            - name: downloads
+              mountPath: /downloads
+            - name: config
+              mountPath: /config
       volumes:
         - name: books
           hostPath:

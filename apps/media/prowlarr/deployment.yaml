@@ -12,21 +12,23 @@ spec:
     metadata:
       labels:
         app: prowlarr
+      annotations:
+        backup.velero.io/backup-volumes: prowlarr-config
     spec:
       containers:
-      - name: prowlarr
-        image: lscr.io/linuxserver/prowlarr:latest
-        ports:
-        - containerPort: 9696
-          name: prowlarr
-        volumeMounts:
-        - name: config
-          mountPath: /config
-      - name: flaresolverr
-        image: ghcr.io/flaresolverr/flaresolverr:latest
-        ports:
-        - containerPort: 8191
-          name: flaresolverr
+        - name: prowlarr
+          image: lscr.io/linuxserver/prowlarr:latest
+          ports:
+            - containerPort: 9696
+              name: prowlarr
+          volumeMounts:
+            - name: config
+              mountPath: /config
+        - name: flaresolverr
+          image: ghcr.io/flaresolverr/flaresolverr:latest
+          ports:
+            - containerPort: 8191
+              name: flaresolverr
       volumes:
         - name: config
           persistentVolumeClaim:

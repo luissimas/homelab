@@ -12,20 +12,22 @@ spec:
     metadata:
       labels:
         app: radarr
+      annotations:
+        backup.velero.io/backup-volumes: radarr-config
     spec:
       containers:
-      - name: radarr
-        image: lscr.io/linuxserver/radarr:latest
-        ports:
-        - containerPort: 7878
-          name: radarr
-        volumeMounts:
-        - name: movies
-          mountPath: /movies
-        - name: downloads
-          mountPath: /downloads
-        - name: config
-          mountPath: /config
+        - name: radarr
+          image: lscr.io/linuxserver/radarr:latest
+          ports:
+            - containerPort: 7878
+              name: radarr
+          volumeMounts:
+            - name: movies
+              mountPath: /movies
+            - name: downloads
+              mountPath: /downloads
+            - name: config
+              mountPath: /config
       volumes:
         - name: movies
           hostPath:
