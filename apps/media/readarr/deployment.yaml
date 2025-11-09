@@ -13,7 +13,7 @@ spec:
       labels:
         app: readarr
       annotations:
-        backup.velero.io/backup-volumes: readarr-config
+        backup.velero.io/backup-volumes: config
     spec:
       containers:
         - name: readarr

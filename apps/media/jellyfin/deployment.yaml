@@ -15,7 +15,7 @@ spec:
       labels:
         app: jellyfin
       annotations:
-        backup.velero.io/backup-volumes: jellyfin-config
+        backup.velero.io/backup-volumes: config
     spec:
       containers:
         - name: jellyfin

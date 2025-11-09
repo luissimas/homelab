@@ -13,7 +13,7 @@ spec:
       labels:
         app: radarr
       annotations:
-        backup.velero.io/backup-volumes: radarr-config
+        backup.velero.io/backup-volumes: config
     spec:
       containers:
         - name: radarr

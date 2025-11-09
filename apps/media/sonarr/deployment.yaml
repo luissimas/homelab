@@ -13,7 +13,7 @@ spec:
       labels:
         app: sonarr
       annotations:
-        backup.velero.io/backup-volumes: sonarr-config
+        backup.velero.io/backup-volumes: config
     spec:
       containers:
         - name: sonarr

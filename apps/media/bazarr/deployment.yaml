@@ -13,7 +13,7 @@ spec:
       labels:
         app: bazarr
       annotations:
-        backup.velero.io/backup-volumes: bazarr-config
+        backup.velero.io/backup-volumes: config
     spec:
       containers:
         - name: bazarr
