@@ -5,6 +5,8 @@ metadata:
   namespace: mealie
   labels:
     app.kubernetes.io/name: mealie
+  annotations:
+    volumeType: local
 spec:
   storageClassName: local-path
   accessModes:
