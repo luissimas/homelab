@@ -5,6 +5,8 @@ metadata:
   namespace: media
   labels:
     app.kubernetes.io/name: jellyfin
+  annotations:
+    volumeType: local
 spec:
   storageClassName: local-path
   accessModes:

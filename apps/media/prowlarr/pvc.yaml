@@ -5,11 +5,12 @@ metadata:
   namespace: media
   labels:
     app: prowlarr
+  annotations:
+    volumeType: local
 spec:
   storageClassName: local-path
   accessModes:
-  - ReadWriteOnce
+    - ReadWriteOnce
   resources:
     requests:
       storage: 500Mi
-
