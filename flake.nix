@@ -20,6 +20,7 @@
             kubeval
             kubeseal
             velero
+            pv-migrate
           ];
         };
       });
