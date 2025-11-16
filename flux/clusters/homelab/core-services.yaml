@@ -12,6 +12,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./apps/core-services
+  path: ./flux/core-services
   prune: true
   wait: true
