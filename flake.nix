@@ -21,6 +21,8 @@
             kubeseal
             velero
             pv-migrate
+            kubeconform
+            kustomize
           ];
         };
       });
