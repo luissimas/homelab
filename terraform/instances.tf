@@ -61,6 +61,16 @@ EOT
     }
   }
 
+  # Passthrough Intel GPU
+  device {
+    name = "intel-gpu"
+    type = "gpu"
+    properties = {
+      id      = "0"
+      gputype = "physical"
+    }
+  }
+
   wait_for {
     type = "ipv4"
     nic  = "eth0"
