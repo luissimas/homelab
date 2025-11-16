@@ -1,2 +1,10 @@
 .direnv
 pub-cert.pem
+backup/
+
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+terraform.tfvars
+*.auto.tfvars
