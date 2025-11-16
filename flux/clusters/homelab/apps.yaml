@@ -15,4 +15,3 @@ spec:
   path: ./flux/apps
   prune: true
   wait: true
-  suspend: true
