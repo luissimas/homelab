@@ -1,13 +1,22 @@
 resource "incus_instance" "k3s_node" {
   name        = "k3s-node"
   type        = "container"
-  image       = "images:alpine/3.22"
+  image       = "images:debian/13"
   description = "Container for the main K3s cluster"
 
   config = {
-    "limits.cpu"       = 4
-    "limits.memory"    = "16GiB"
-    "security.nesting" = true
+    "limits.cpu"           = 4
+    "limits.memory"        = "16GiB"
+    "security.privileged"  = true
+    "security.nesting"     = true
+    "linux.kernel_modules" = "overlay,nf_nat,ip_tables,ip6_tables,netlink_diag,br_netfilter,xt_conntrack,nf_conntrack,ip_vs,vxlan"
+    "raw.lxc"              = <<EOT
+lxc.apparmor.profile = unconfined
+lxc.mount.auto=proc:rw sys:rw cgroup:rw
+lxc.cap.drop =
+lxc.cgroup.devices.allow = a
+lxc.cgroup2.devices.allow = a
+EOT
   }
 
   device {
@@ -39,6 +48,16 @@ resource "incus_instance" "k3s_node" {
     properties = {
       network = incus_network.macvlan.name
       name    = "eth0"
+    }
+  }
+
+  # Kubelet needs access /dev/kmsg for logging
+  device {
+    name = "kmsg"
+    type = "unix-char"
+    properties = {
+      source = "/dev/kmsg"
+      path   = "/dev/kmsg"
     }
   }
 
