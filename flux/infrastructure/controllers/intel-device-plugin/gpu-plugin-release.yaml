@@ -17,3 +17,4 @@ spec:
   targetNamespace: intel-device-plugin
   values:
     nodeFeatureRule: true
+    sharedDevNum: 5
