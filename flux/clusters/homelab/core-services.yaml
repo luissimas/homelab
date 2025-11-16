@@ -1,7 +1,7 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: apps
+  name: core-services
   namespace: flux-system
 spec:
   dependsOn:
@@ -12,7 +12,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./apps
+  path: ./apps/core-services
   prune: true
   wait: true
-  suspend: true
