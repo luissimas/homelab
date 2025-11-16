@@ -40,7 +40,7 @@ spec:
       volumes:
         - name: media
           hostPath:
-            path: /home/padawan/media
+            path: /mnt/data/media
             type: Directory
         - name: config
           persistentVolumeClaim:

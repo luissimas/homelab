@@ -40,7 +40,7 @@ spec:
       volumes:
         - name: downloads
           hostPath:
-            path: /media/downloads
+            path: /mnt/data/downloads
             type: Directory
         - name: config
           persistentVolumeClaim:

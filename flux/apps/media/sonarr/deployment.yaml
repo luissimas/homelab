@@ -31,11 +31,11 @@ spec:
       volumes:
         - name: shows
           hostPath:
-            path: /home/padawan/media/shows
+            path: /mnt/data/media/shows
             type: Directory
         - name: downloads
           hostPath:
-            path: /media/downloads
+            path: /mnt/data/downloads
             type: Directory
         - name: config
           persistentVolumeClaim:
