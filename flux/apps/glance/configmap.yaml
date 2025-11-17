@@ -97,6 +97,8 @@ data:
                 markets:
                   - symbol: WRLD11.SA
                     name: WRLD11
+                  - symbol: CHFBRL=X
+                    name: CHF
                   - symbol: BTC-USD
                     name: Bitcoin
 
