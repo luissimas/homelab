@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
   - headlamp
   - monitoring
-  # - velero
+  - velero
